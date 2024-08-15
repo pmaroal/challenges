@@ -12,9 +12,6 @@ As I add more challenges, I will list them here with links to their respective f
 
 ## Challenges
 
-
-
 ## Technologies Used
 
 - JavaScript
-
