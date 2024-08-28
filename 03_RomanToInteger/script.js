@@ -15,16 +15,33 @@ function romanToInt(s) {
   // Recorremos el string
   for (let i = 0; i < s.length; i++) {
     // Obtener el valor del símbolo actual
-    const currentVal = romanMap[s[i]];
-    // Obtener el valor del símbolo siguiente (si existe)
-    const nextVal = romanMap[s[i + 1]];
+    const firstVal = romanMap[s[i]];
+    if (firstVal === undefined) continue;
+    //console.log(firstVal);
 
-    // Si el valor actual es menor que el siguiente, restarlo
-    if (currentVal < nextVal) {
-      total -= currentVal;
-    } else {
-      // De lo contrario, sumarlo
-      total += currentVal;
+    // Obtener el valor del símbolo siguiente (si existe)
+    const secondVal = romanMap[s[i + 1]];
+    //console.log(secondVal);
+    if (secondVal === undefined) continue;
+    else {
+      if (secondVal <= firstVal) {
+        total = firstVal + secondVal;
+        //console.log(total);
+      } else if (secondVal > firstVal) {
+        total = secondVal - firstVal;
+      }
+    }
+    const thirdVal = romanMap[s[i + 2]];
+    if (thirdVal === undefined) continue;
+    else {
+      console.log(total);
+      if (thirdVal <= secondVal) {
+        total = total + thirdVal;
+      } else if (thirdVal > secondVal) {
+        thirdVal = thirdVal - secondVal;
+        total = thirdVal - secondVal;
+        console.log(total);
+      }
     }
   }
 
@@ -32,6 +49,7 @@ function romanToInt(s) {
 }
 
 // Ejemplos de uso
-console.log(romanToInt("III")); // Salida: 3
-console.log(romanToInt("LVIII")); // Salida: 58
-console.log(romanToInt("MCMXCIV")); // Salida: 1994
+// console.log(romanToInt("III")); // Salida: 3
+// console.log(romanToInt("LVIII")); // Salida: 58
+// console.log(romanToInt("MCMXCIV")); // Salida: 1994
+romanToInt("XIV");
