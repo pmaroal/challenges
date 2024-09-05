@@ -48,8 +48,8 @@ function romanToInt(s) {
   return total;
 }
 
-// Ejemplos de uso
-// console.log(romanToInt("III")); // Salida: 3
-// console.log(romanToInt("LVIII")); // Salida: 58
-// console.log(romanToInt("MCMXCIV")); // Salida: 1994
+//Ejemplos de uso
+console.log(romanToInt("III")); // Salida: 3
+console.log(romanToInt("LVIII")); // Salida: 58
+console.log(romanToInt("MCMXCIV")); // Salida: 1994
 romanToInt("XIV");
