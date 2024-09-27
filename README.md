@@ -12,6 +12,13 @@ As I add more challenges, I will list them here with links to their respective f
 
 ## Challenges
 
+1. Two sum
+2. Palindrome number
+3. Roman to integer
+4. Array prototype last
+5. Counter
+6. Add two numbers
+
 ## Technologies Used
 
 - JavaScript
