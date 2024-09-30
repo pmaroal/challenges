@@ -18,6 +18,7 @@ As I add more challenges, I will list them here with links to their respective f
 4. Array prototype last
 5. Counter
 6. Add two numbers
+7. Longest common prefix
 
 ## Technologies Used
 
